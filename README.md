@@ -18,7 +18,7 @@ La aplicación simula el área privada de la empresa “Doble Electricidad” y 
   - Fecha de emisión
   - Importe
   - Dirección del suministro
-- Posibilidad de visualizar y descargar la factura en PDF (PDF en blanco, según el enunciado).
+- Posibilidad de visualizar y descargar la factura en PDF.
 
 ### Consultar datos personales
 - Visualización de los datos personales del usuario:
