@@ -9,14 +9,20 @@
     <ion-content>
       <ion-list>
         <ion-menu-toggle autoHide="true">
-          <ion-item button routerLink="/invoices"> Facturas </ion-item>
+          <ion-item button routerLink="/invoices">
+            {{ "INVOICES.TITLE" | translate }}
+          </ion-item>
         </ion-menu-toggle>
 
         <ion-menu-toggle autoHide="true">
-          <ion-item button routerLink="/profile"> Datos personales </ion-item>
+          <ion-item button routerLink="/profile">
+            {{ "PROFILE.TITLE" | translate }}
+          </ion-item>
         </ion-menu-toggle>
       </ion-list>
     </ion-content>
+    <ion-button size="small" (click)="changeLang('es')">ES</ion-button>
+    <ion-button size="small" (click)="changeLang('en')">EN</ion-button>
   </ion-menu>
 
   <ion-router-outlet id="main-content"></ion-router-outlet>

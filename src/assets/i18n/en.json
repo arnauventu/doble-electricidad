@@ -1,0 +1,21 @@
+{
+  "COMMON": {
+    "SAVE": "Save changes",
+    "EDIT": "Edit profile"
+  },
+  "PROFILE": {
+    "TITLE": "Personal data",
+    "NAME": "Full name",
+    "EMAIL": "Email",
+    "SIGNUP_DATE": "Signup date",
+    "ADDRESS": "Shipping address"
+  },
+  "INVOICES": {
+    "TITLE": "Invoices",
+    "DATE": "Date",
+    "AMOUNT": "Amount",
+    "ADDRESS": "Address",
+    "VIEW": "View",
+    "PDF": "PDF"
+  }
+}

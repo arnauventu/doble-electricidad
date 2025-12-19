@@ -1,0 +1,21 @@
+{
+  "COMMON": {
+    "SAVE": "Guardar cambios",
+    "EDIT": "Editar datos"
+  },
+  "PROFILE": {
+    "TITLE": "Datos personales",
+    "NAME": "Nombre titular",
+    "EMAIL": "Correo electrónico",
+    "SIGNUP_DATE": "Fecha de alta",
+    "ADDRESS": "Dirección de envío"
+  },
+  "INVOICES": {
+    "TITLE": "Facturas",
+    "DATE": "Fecha",
+    "AMOUNT": "Importe",
+    "ADDRESS": "Dirección",
+    "VIEW": "Ver",
+    "PDF": "PDF"
+  }
+}

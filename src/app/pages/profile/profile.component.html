@@ -3,11 +3,67 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-
-    <ion-title>Datos personales</ion-title>
+    <ion-title>{{ "PROFILE.TITLE" | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <p>Página de perfil</p>
+  <form [formGroup]="form" [appReadonly]="!isEditing">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          {{ form.value.name }}
+        </ion-card-title>
+        <ion-card-subtitle>
+          {{ form.value.email }}
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">{{
+            "PROFILE.NAME" | translate
+          }}</ion-label>
+          <ion-input formControlName="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">{{
+            "PROFILE.EMAIL" | translate
+          }}</ion-label>
+          <ion-input formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">{{
+            "PROFILE.SIGNUP_DATE" | translate
+          }}</ion-label>
+          <ion-input formControlName="signupDate"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">{{
+            "PROFILE.ADDRESS" | translate
+          }}</ion-label>
+          <ion-textarea formControlName="address"></ion-textarea>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </form>
+
+  @if (!isEditing) {
+  <ion-button expand="block" (click)="edit()">
+    {{ "COMMON.EDIT" | translate }}
+  </ion-button>
+  }
 </ion-content>
+
+@if (isEditing) {
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" (click)="save()">
+      {{ "COMMON.SAVE" | translate }}
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
+}

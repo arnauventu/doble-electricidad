@@ -3,11 +3,41 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-
-    <ion-title>Facturas</ion-title>
+    <ion-title>{{ "INVOICES.TITLE" | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <p>Página de facturas</p>
+  @if (invoices$ | async; as invoices) {
+  <ion-list>
+    @for (invoice of invoices; track invoice.id) {
+    <ion-item>
+      <ion-label>
+        <h2>{{ invoice.name }}</h2>
+        <p>
+          <strong>{{ "INVOICES.DATE" | translate }}:</strong> {{ invoice.date }}
+        </p>
+        <p>
+          <strong>{{ "INVOICES.AMOUNT" | translate }}:</strong>
+          {{ invoice.amount | amountEuro }}
+        </p>
+        <p>
+          <strong>{{ "INVOICES.ADDRESS" | translate }}:</strong>
+          {{ invoice.supplyAddress }}
+        </p>
+      </ion-label>
+
+      <ion-buttons slot="end">
+        <ion-button fill="outline" (click)="viewInvoice(invoice)">
+          {{ "INVOICES.VIEW" | translate }}
+        </ion-button>
+
+        <ion-button fill="solid" (click)="downloadInvoice(invoice)">
+          {{ "INVOICES.PDF" | translate }}
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+    }
+  </ion-list>
+  }
 </ion-content>
