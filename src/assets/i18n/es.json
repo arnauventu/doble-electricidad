@@ -17,5 +17,12 @@
     "ADDRESS": "Dirección",
     "VIEW": "Ver",
     "PDF": "PDF"
+  },
+
+  "LOGIN": {
+    "TITLE": "Acceso",
+    "EMAIL": "Correo electrónico",
+    "PASSWORD": "Contraseña",
+    "SUBMIT": "Entrar"
   }
 }

@@ -6,7 +6,7 @@ import { ProfileRepository } from '../../domain/profile/profile.repository';
 import { Profile } from '../../domain/profile/profile.model';
 
 /** Clave para almacenar el perfil en el storage local */
-const PROFILE_KEY = 'profile_ar';
+const PROFILE_KEY = 'profile_arnauu';
 
 /**
  * Implementación del repositorio de perfiles usando Ionic Storage

@@ -1,12 +1,23 @@
 import { Routes } from '@angular/router';
 import { ShellComponent } from './layout/shell/shell.component';
+import { authGuard } from './application/auth/auth.guard';
 
 export const routes: Routes = [
   {
+    path: 'login',
+    loadComponent: () =>
+      import('./pages/login/login.component').then((m) => m.LoginPage),
+  },
+  {
     path: '',
     component: ShellComponent,
+    canActivate: [authGuard],
     children: [
-      { path: '', redirectTo: 'invoices', pathMatch: 'full' },
+      {
+        path: '',
+        redirectTo: 'invoices',
+        pathMatch: 'full',
+      },
       {
         path: 'invoices',
         loadComponent: () =>

@@ -26,6 +26,10 @@ import {
   provideTranslateHttpLoader,
   TranslateHttpLoader,
 } from '@ngx-translate/http-loader';
+import { AuthRepository } from './app/domain/auth/auth.repository';
+import { AuthStorageRepository } from './app/infrastructure/auth/auth.storage.repository';
+import { GetSessionUseCase } from './app/application/auth/get-session.use-case';
+import { LoginUseCase } from './app/application/auth/login.use-case';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -45,5 +49,11 @@ bootstrapApplication(AppComponent, {
       provide: ProfileRepository,
       useClass: ProfileStorageRepository,
     },
+    {
+      provide: AuthRepository,
+      useClass: AuthStorageRepository,
+    },
+    GetSessionUseCase,
+    LoginUseCase,
   ],
 });

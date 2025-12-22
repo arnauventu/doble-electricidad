@@ -4,7 +4,7 @@
     "EDIT": "Edit profile"
   },
   "PROFILE": {
-    "TITLE": "Personal data",
+    "TITLE": "Personal Data",
     "NAME": "Full name",
     "EMAIL": "Email",
     "SIGNUP_DATE": "Signup date",
@@ -17,5 +17,11 @@
     "ADDRESS": "Address",
     "VIEW": "View",
     "PDF": "PDF"
+  },
+  "LOGIN": {
+    "TITLE": "Login",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "SUBMIT": "Sign in"
   }
 }
